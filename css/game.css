@@ -1,0 +1,70 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background-color: black;
+  border: 2px solid black;
+  width: min(100%, 350px);
+}
+
+
+.cell {
+  position: relative;
+  aspect-ratio: 1;
+  background: white;
+}
+
+.block {
+  background: black;
+  aspect-ratio: 1;
+}
+
+
+.num {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  font-size: 0.75rem;
+  color: black;
+}
+
+
+.cell input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+
+.cell input:focus {
+  background-color: #ffd84d;
+}
+
+
+details {
+  margin-top: 2rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+  .puzzle {
+    overflow-x: auto;
+  }
+
+  .grid {
+    grid-template-columns: repeat(7, var(--tap));
+    width: max-content;
+  }
+}
